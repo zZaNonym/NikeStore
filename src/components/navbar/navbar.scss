@@ -1,0 +1,213 @@
+.navbar {
+  //Desktop version
+  &_desktop-container {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    background-color: white;
+  }
+  &_desktop-top {
+    height: 40px;
+    border-bottom: 1px solid rgba(185, 185, 185, 0.425);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &-start {
+      width: 95px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid rgba(185, 185, 185, 0.425);
+
+      &:hover {
+        & > span {
+          color: black;
+        }
+      }
+      & > span {
+        font-size: 13px;
+        color: #757575;
+      }
+    }
+
+    &-end {
+      display: flex;
+      height: 100%;
+      justify-content: space-between;
+      &-item {
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        padding: 0 12px;
+        width: auto;
+        height: 100%;
+        & > span {
+          color: #757575;
+          font-size: 13px;
+        }
+
+        &:hover {
+          & > span {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+  &_desktop-bottom {
+    height: 72px;
+    border-bottom: 1px solid rgba(185, 185, 185, 0.425);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-brand {
+      padding: 12px 20px;
+      height: 49px;
+      width: 60px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & > img {
+        width: 60px;
+      }
+    }
+    position: relative;
+    &-menu {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      height: 100%;
+
+      &-item {
+        color: black;
+        font-weight: 500;
+        font-family: 'Teko', sans-serif;
+        font-size: 18px;
+        letter-spacing: 0.5px;
+        margin: 0;
+        padding: 0 20px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        &:hover {
+          border-bottom: 2px solid black;
+        }
+      }
+    }
+  }
+
+  //Mobile version
+
+  &_mobile {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9;
+    background-color: white;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(185, 185, 185, 0.425);
+    &-brand {
+      width: 90px;
+      display: flex;
+      justify-content: center;
+      & > img {
+        width: 50px;
+        height: 45px;
+      }
+    }
+    &-menu {
+      margin-right: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &-item {
+        cursor: pointer;
+        padding: 0 6px;
+        & > svg {
+          font-size: 24px;
+        }
+      }
+      &-burger {
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 276px;
+        background-color: white;
+        width: fit-content;
+        animation-name: burger;
+        animation-duration: 1.5s;
+        &-item {
+          font-family: 'Teko', sans-serif;
+          font-size: 18px;
+          display: block;
+          padding: 14px 20px;
+          border-bottom: 1px solid rgba(185, 185, 185, 0.425);
+          cursor: pointer;
+          color: black;
+        }
+      }
+    }
+  }
+}
+.background-trasparent {
+  z-index: 999;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 800px;
+  background-color: rgba($color: #000000, $alpha: 0.3);
+}
+.search_input-container {
+  position: relative;
+  & > span > svg {
+    font-size: 17px;
+    cursor: pointer;
+  }
+  .search_input {
+    margin-right: 20px;
+    padding: 8px 30px 8px 30px;
+    border: 1px solid rgba(155, 155, 155, 0.342);
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 1.714285714285714;
+    width: 140px;
+    transition: border 1s;
+    &:focus {
+      border: 1px solid black;
+    }
+    &-icon-search {
+      position: absolute;
+      top: 12px;
+      left: 10px;
+    }
+    &-icon-close {
+      position: absolute;
+      top: 12px;
+      right: 30px;
+    }
+  }
+}
+
+@keyframes burger {
+  0% {
+    right: -276px;
+  }
+  100% {
+    right: 0;
+  }
+}
+@media only screen and (max-width: 890px) {
+  .content {
+    margin-top: 46px !important;
+  }
+  .products__header {
+    top: 46px !important;
+  }
+}

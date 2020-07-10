@@ -1,0 +1,65 @@
+body,
+html,
+#root {
+  height: 100%;
+}
+* {
+  text-decoration: none;
+  outline: none;
+}
+
+body {
+  font-size: inherit;
+  font-family: 'Teko', sans-serif;
+  line-height: inherit;
+  margin: 0;
+  background-color: #fff;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: black;
+  background: transparent;
+  transition: background-color 5000s ease-in-out 0s;
+}
+.content {
+  margin-top: 120px;
+  margin-bottom: 60px;
+  min-height: 461px;
+  &_header {
+    height: 50px;
+    position: relative;
+    &-tag {
+      margin: 0;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+    }
+    justify-content: center;
+    display: flex;
+  }
+  &_menu {
+    display: flex;
+    align-items: center;
+    & > a {
+      text-decoration: none;
+      color: black;
+      margin: 0 15px;
+      font-size: 24px;
+    }
+  }
+  &-container {
+    padding: 20px 60px;
+  }
+}

@@ -1,0 +1,64 @@
+.bannerCard {
+  &_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 250px;
+    z-index: 1;
+    margin: 20px 0 0 20px;
+    color: white;
+    &-top {
+      font-size: 18px;
+      line-height: 1.5;
+      margin-left: 2px;
+      font-family: sans-serif;
+    }
+    &-bottom {
+      margin: 0;
+      font-family: 'Archivo Black', sans-serif;
+      font-size: 62px;
+      text-transform: uppercase;
+      font-weight: bold;
+      line-height: 0.833333;
+    }
+  }
+  &_link {
+    color: black;
+  }
+  &_images {
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+    &-img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      left: 0;
+    }
+  }
+}
+@media only screen and (max-width: 1020px) {
+  .bannerCard_images {
+    height: 500px;
+  }
+  .bannerCard_content {
+    width: 40%;
+    &-bottom {
+      font-size: 44px;
+    }
+  }
+  .content-container {
+    padding: 10px 20px !important;
+  }
+  .carousel {
+    padding: 0 20px !important;
+  }
+}
+@media only screen and (max-width: 630px) {
+  .bannerCard_content {
+    top: 250px;
+    margin: 0 0 20px 20px;
+  }
+}

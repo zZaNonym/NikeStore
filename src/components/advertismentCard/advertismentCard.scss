@@ -1,0 +1,44 @@
+.advCard {
+  &-wrapper {
+    & > a:nth-last-child(1) {
+      padding-left: 16px;
+    }
+
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  color: black;
+  &_container {
+    position: relative;
+    &-text {
+      position: absolute;
+      font-size: 25px;
+      font-weight: 400;
+      color: white;
+      bottom: 40px;
+      left: 30px;
+    }
+    height: 700px;
+    overflow: hidden;
+    &-img {
+      height: 100%;
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+@media only screen and (max-width: 1025px) {
+  .advCard_container {
+    height: 500px;
+  }
+}
+@media only screen and (max-width: 635px) {
+  .advCard-wrapper {
+    flex-wrap: wrap;
+    & > a:nth-last-child(1) {
+      padding-top: 16px !important;
+      padding-left: 0px !important;
+    }
+  }
+}
