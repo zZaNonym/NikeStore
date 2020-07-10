@@ -25,3 +25,12 @@ to generate the scaffolding for this app.
 
 ### assets
 Folder for images and another project file dependence
+
+### components
+Pure jsx components 
+
+### containers
+Connected pure component with redux 
+
+### utils
+API and other function used in project
