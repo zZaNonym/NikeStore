@@ -18,19 +18,25 @@ By [Dinu Adrian](zzanonym.666@gmail.com)
 ## Discussion
 
 I used the following technologies: HTML, SCSS, React.
-I used [create-react-app](https://goo.gl/26jfy4)
+I used [vue create app](https://cli.vuejs.org/)
 to generate the scaffolding for this app.
 
 ## Project structure 
 
 ### assets
-Folder for images and another project file dependence
+Folder for images and global css files
 
 ### components
-Pure jsx components 
+Pure vue components 
 
-### containers
-Connected pure component with redux 
+### filters
+Js functions for currency,locales and date formating 
 
 ### utils
 API and other function used in project
+
+### router
+Aplication router [vue router](https://router.vuejs.org/)
+
+### store
+Global state [vuex](https://vuex.vuejs.org/ru/guide/)
